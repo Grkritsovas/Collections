@@ -1,0 +1,25 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import Counter
+num_of_shoes=input()
+list_of_shoe_sizes=input().split(" ")
+N=input()
+purch=[]
+#print(list_of_shoe_sizes)
+#for i in range(int(N)):
+licit=[]
+money=0
+for i in range(int(N)):
+    c=0
+    x=input().split(" ")
+    if x[0] in list_of_shoe_sizes:
+        licit.append(x[0])
+        for j,p in enumerate(list_of_shoe_sizes):
+            if x[0]==list_of_shoe_sizes[j]:
+                if c==0:
+                    list_of_shoe_sizes.pop(j)
+                    c=c+1
+        if x[0] in licit:
+            money=money+int(x[1])
+        
+print(money)  
+    
